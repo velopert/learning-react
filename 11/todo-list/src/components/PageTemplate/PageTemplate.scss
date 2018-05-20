@@ -1,0 +1,25 @@
+.page-template {
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  background: white;
+  // 그림자를 띄워줍니다.
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding-top: 2rem;
+
+  // 브라우저의 크기가 768px 미만으로 됐을 땐,
+  @media(max-width: 768px) {
+    margin-top: 1rem;
+    width: calc(100% - 2rem); // 양 옆에 1rem의 여백을 남기고 꽉 채워줍니다.
+  }
+  h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    margin: 0;
+  }
+  .content {
+    margin-top: 2rem;
+  }
+}

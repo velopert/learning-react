@@ -1,0 +1,18 @@
+@import '~open-color/open-color';
+@import '~include-media/dist/include-media';
+
+
+$breakpoints: (
+  small: 376px, 
+  medium: 768px, 
+  large: 1024px, 
+  huge: 1200px
+);
+
+$size: 100px;
+
+@mixin place-at-center() {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

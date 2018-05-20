@@ -1,0 +1,42 @@
+@import 'utils'; // open-color 를 사용해야 하므로 utils를 불러왔습니다.
+
+.todo-input {
+  border-top: 1px solid $oc-gray-2;
+  border-bottom: 1px solid $oc-gray-2;
+  // 손쉬운 레이아웃 설정을 위하여 flex를 사용합니다.
+  display: flex;
+  padding: 1rem;
+  input {
+    // 인풋의 기본 스타일을 지우고 새 스타일을 정의합니다.
+    flex: 1; // 부모 엘리먼트에서 add-button을 제외한 나머지 공간을 차지합니다.
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid $oc-gray-4;
+    &:focus {
+      border-bottom: 1px solid $oc-cyan-6;
+    }
+  }
+  .add-button {
+    width: 5rem;
+    height: 2rem;
+    margin-left: 1rem;
+    border: 1px solid $oc-green-7;
+    color: $oc-green-7;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: flex;
+    // 내용을 가운데에 정렬시킵니다.
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      background: $oc-green-7;
+      color: white;
+    }
+    &:active {
+      background: $oc-green-8;
+    }
+  }
+}

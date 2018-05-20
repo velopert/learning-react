@@ -1,0 +1,42 @@
+@import 'utils';
+
+.button {
+  background: $oc-green-7;
+  transition: all .2s ease-in;
+  display: inline-block;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  color: white;
+  position: fixed;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @include place-at-center();
+
+  width: 1200px;
+
+  // 반응형 디자인
+  @include media("<huge") {
+    width: 1024px;
+  }
+
+  @include media("<large") {
+    width: 768px;
+  }
+
+  @include media("<medium") {
+    width: 90%;
+  }
+
+  // 마우스 상태에 따라 다른 효과 지정
+  &:hover {
+    background: $oc-green-6;
+  }
+  &:active {
+    margin-top: 3px;
+    background: $oc-green-8;
+  }
+}
