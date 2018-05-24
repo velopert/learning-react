@@ -6,6 +6,7 @@ import {
   Posts
 } from 'pages';
 import Menu from 'components/Menu';
+import AsyncSplitMe from 'components/AsyncSplitMe';
 
 const App = () => {
   return (
