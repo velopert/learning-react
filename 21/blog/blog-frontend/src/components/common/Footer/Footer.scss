@@ -1,0 +1,31 @@
+@import 'utils';
+
+.footer {
+  background: $oc-gray-7;
+  height: 10rem;
+  
+  // 내부 내용 중앙 정렬
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; // 위에서 아래로
+
+  .brand {
+    // 로고
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .admin-login {
+    // 로그인 버튼
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.8);
+    cursor: pointer; // 손가락 모양 커서
+    &:hover { // 마우스 호버 시 불투명도 없애기
+      color: white;
+    }
+  }
+}
