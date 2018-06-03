@@ -1,0 +1,70 @@
+@import 'utils';
+
+.button {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: white;
+  cursor: pointer;
+  user-select: none; // 드래그 방지
+  display: inline-flex;
+  
+  // default: 파란색 버튼
+  &.default {
+    background: $oc-blue-6;
+    &:hover {
+      background: $oc-blue-5;
+    }
+    &:active {
+      background: $oc-blue-6;
+    }
+  }
+
+  // gray: 회색 버튼
+  &.gray {
+    background: $oc-gray-7;
+    &:hover {
+      background: $oc-gray-6;
+    }
+    &:active {
+      background: $oc-gray-7;
+    }
+  }
+  
+  // outline: 흰색 테두리 버튼
+  &.outline {
+    border: 2px solid white;
+    border-radius: 2px;
+    &:hover {
+      background: white;
+      color: $oc-blue-6;
+    }
+    &:active {
+      background: rgba(255,255,255, 0.85);
+      border: 2px solid rgba(255,255,255, 0.85);
+    }
+  }
+
+  &:hover {
+    @include material-shadow(2, 0.5); // 마우스 커서가 위에 있으면 그림자 생성
+  }
+
+  // 비활성화된 버튼
+  &.disabled {
+    background: $oc-gray-4;
+    color: $oc-gray-6;
+    cursor: default;
+    &:hover, &:active {
+      box-shadow: none;
+      background: $oc-gray-4;
+    }
+  }
+
+  // 버튼 두 개 이상이 함께 있다면 중간 여백
+  & + & {
+    margin-left: 0.5rem;
+  }
+}

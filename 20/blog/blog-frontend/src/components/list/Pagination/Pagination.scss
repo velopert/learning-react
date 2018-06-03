@@ -1,0 +1,15 @@
+@import 'utils';
+.pagination {
+  margin-top: 2rem;
+
+  // 중앙에 세로로 정렬
+  display: flex;
+  align-items: center;
+  
+  .number {
+    font-size: 0.85rem;
+    text-align: center;
+    color: $oc-gray-6;
+    flex: 1; // 남은 공간을 다 차지
+  }
+}

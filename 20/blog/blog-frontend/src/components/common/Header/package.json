@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "include-media": "^1.4.9",
+    "open-color": "^1.6.3"
+  }
+}
