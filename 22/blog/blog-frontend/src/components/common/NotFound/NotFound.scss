@@ -1,0 +1,14 @@
+@import 'utils';
+.not-found {
+  height: 100vh;
+  background: $oc-blue-6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h2 {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 400;
+  }
+}

@@ -4,9 +4,14 @@ import PostBody from 'components/post/PostBody';
 import * as postActions from 'store/modules/post';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import shouldCancel from 'lib/shouldCancel';
+import { Helmet } from 'react-helmet';
+import removeMd from 'remove-markdown';
+
 
 class Post extends Component {
   initialize = async () => {
+    if (shouldCancel()) return;
     const { PostActions, id } = this.props;
     try {
       await PostActions.getPost(id);
@@ -28,6 +33,13 @@ class Post extends Component {
 
     return (
       <div>
+        { /* body 값이 있을 때만 Helmet 설정 */ body && (
+          <Helmet>
+            <title>{title}</title>
+            <meta name="description" content={removeMd(body).slice(0, 200)}/>
+          </Helmet>)
+        }
+
         <PostInfo title={title} publishedDate={publishedDate} tags={tags}/>
         <PostBody body={body}/>
       </div>
