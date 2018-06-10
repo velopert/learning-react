@@ -25,9 +25,11 @@ export default function asyncComponent(getComponent) {
   }
 
   // 서버 사이드 렌더링 / 코드 스플리팅 충돌 해결을 위한 함수
-  AsyncComponent.getComponent = () => getComponent().then(({ default: Component }) => {
-    AsyncComponent.Component = Component;
-  });
+  AsyncComponent.getComponent = () => {
+    return getComponent().then(({ default: Component }) => {
+      AsyncComponent.Component = Component;
+    });
+  }
 
   return AsyncComponent;
 }
