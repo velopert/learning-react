@@ -1,5 +1,6 @@
-## 오탈자 및 개선사항
+# 오탈자 및 개선사항
 
+## 1쇄
 ### pg.73 [(Issue #2)](https://github.com/velopert/learning-react/issues/2)
 - App.js 코드 6번째 줄
 - 코드상에서는 React 이나 스크린샷에는 react
