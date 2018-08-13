@@ -51,7 +51,12 @@ export default handleActions({
     */
   },
   [REMOVE]: (state, action) => {
-    const { payload: index } = action;
+    const { payload: id } = action;
+
+    const index = state.findIndex(
+        (todo) => todo.id === id
+    );
+
     return state.delete(index);
   }
 }, initialState);
