@@ -37,7 +37,11 @@ export default handleActions({
     }));
   },
   [TOGGLE]: (state, action) => {
-    const { payload: index } = action;
+    const { payload: id } = action;
+
+    const index = state.findIndex(
+        (todo) => todo.get('id') === id
+    );
     // = const index = action.payload;
     /* 비구조화 할당을 통하여 index라는 레퍼런스에 action.payload란 값을 넣습니다.
     이 작업이 필수는 아니지만, 나중에 이 코드를 보게 되었을 때 여기서의 payload가
@@ -54,7 +58,7 @@ export default handleActions({
     const { payload: id } = action;
 
     const index = state.findIndex(
-        (todo) => todo.id === id
+        (todo) => todo.get('id') === id
     );
 
     return state.delete(index);
