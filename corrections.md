@@ -2,7 +2,7 @@
 
 ## 1쇄
 
-### pg.27 [(Isssue #17](https://github.com/velopert/learning-react/issues/17)
+### pg.27 [(Isssue #17](https://github.com/velopert/learning-react/issues/17))
 
 - "author": "velopert" 부분 뒤에 쉼표가 하나 빠짐
 
