@@ -10,7 +10,7 @@
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "koa-session": "^5.8.1",
-    "mongoose": "^5.1.2"
+    "mongoose": "^5.2.12"
   },
   "devDependencies": {
     "eslint": "^4.19.1",

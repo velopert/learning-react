@@ -75,7 +75,7 @@ $ yarn start
 
 수정 후: **3.3.4**절에서 작성한 버튼 코드를 다시 한 번 살펴봅시다
 
-### pg.92
+### pg.92 [(Issue #23)](https://github.com/velopert/learning-react/issues/23)
 
 오탈자는 아니지만, 설명에 오해의 여지가 있어서 개선
 
@@ -217,6 +217,12 @@ VSCode 설정에서
 수정 전: `mongoose.connect(mongoURI).then(...)`
 
 수정 후: `mongoose.connect(mongoURI, { useNewUrlParser: true }).then(...)`
+
+### pg. 471, 473, 582 [(Issue 22)](https://github.com/velopert/learning-react/issues/22) ✅
+- mongoose count 함수가 deprecated 될 예정이여서 countDocuments 로 변경 
+
+수정 전: `Post.count(`
+수정 후: `Post.countDocuments(`
 
 ### pg.575 ([Issue #1](https://github.com/velopert/learning-react/issues/1)) ✅
 - 맨 마지막 줄
