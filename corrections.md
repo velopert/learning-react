@@ -106,6 +106,20 @@ $ yarn start
 
 수정 후: `src/styles/main.scss`
 
+### pg.196 ([Issue #26](https://github.com/velopert/learning-react/issues/12))
+
+- 오탈자는 아니지만.. 일부 환경에서 yarn eject 후 babel-loader 가 설치가 제대로 안되는 오류가 발생하고 있는데 이를 위한 해결방안 추가.
+- 다음 내용을 참고 박스 안에 넣어서 내용 추가
+
+####오류가 발생한다면? 
+
+일부 환경에서 yarn eject 후 서버를 시작 할 때 babel-loader 가 제대로 설치되어있지 않다는 오류가 발생 할 수 있습니다. 그럴 땐, yarn 명령어를 사전에 한번 실행해주면, 제대로 설치가 이뤄집니다.
+
+```
+$ yarn
+$ yarn start
+```
+
 ### pg. 199 ([Issue #5](https://github.com/velopert/learning-react/issues/5)) ✅
 - PageTemplate.js 파일 경로
 - 경로에 PageTemplate/ 경로가 빠져있음
