@@ -27,12 +27,6 @@
 }
 ```
 
-### pg.32 [(Issue #11)](https://github.com/velopert/learning-react/issues/11)
-- 3번째 줄
-
-수정 전: 요소 개수가 **몇 백 개, 몇 천 개 단위로 많다면**
-
-수정 후: 요소 개수가 **몇백 개, 몇천 개** 단위로 많다면
 
 ### pg.34 [(Issue #11)](https://github.com/velopert/learning-react/issues/11)
 - 2번째 줄
@@ -76,7 +70,7 @@ $ yarn start
 
 수정 후: `<MyComponent name="react"/>`
 
-### pg.81 [(Issue #14)](https://github.com/velopert/learning-react/issues/14)
+### pg.91 [(Issue #14)](https://github.com/velopert/learning-react/issues/14)
 수정 전: **3.4.4**절에서 작성한 버튼 코드를 다시 한 번 살펴봅시다
 
 수정 후: **3.3.4**절에서 작성한 버튼 코드를 다시 한 번 살펴봅시다
@@ -207,15 +201,15 @@ VSCode 설정에서
 
 수정 전: `MONGO_URI=mongodb://localhost/blog`
 
-수정 후: `MONGO_URI=mongodb://localost:27017/blog`
+수정 후: `MONGO_URI=mongodb://localhost:27017/blog`
 
 ### pg. 446
 - src/index.js 코드 8번째 줄
 - mongoose 버전 업데이트로 인하여 useNewUrlParser 옵션 추가
 
-수정 전: `mongoose.connect(mongoURI);`
+수정 전: `mongoose.connect(mongoURI).then(...)`
 
-수정 후: `mongoose.connect(mongoURI, { useNewUrlParser: true });`
+수정 후: `mongoose.connect(mongoURI, { useNewUrlParser: true }).then(...)`
 
 ### pg.575 ([Issue #1](https://github.com/velopert/learning-react/issues/1)) ✅
 - 맨 마지막 줄
