@@ -75,6 +75,13 @@ $ yarn start
 
 수정 후: **3.3.4**절에서 작성한 버튼 코드를 다시 한 번 살펴봅시다
 
+### pg.92
+
+오탈자는 아니지만, 설명에 오해의 여지가 있어서 개선
+
+수정 전: 그냥 이름이 onClick인 props를 전달받습니다.
+수정 후: 그냥 이름이 onClick 인 props 를 MyComponent 에게 전달해줄 뿐입니다.
+
 ### pg.149 [(Issue #21)](https://github.com/velopert/learning-react/issues/21)
 
 - 페이지 하단 설명 부분 함수명이 잘못됨
