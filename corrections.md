@@ -246,6 +246,12 @@ VSCode 설정에서
 수정 전: `Post.count(`
 수정 후: `Post.countDocuments(`
 
+### pg. 459 [(Issue #32)](https://github.com/velopert/learning-react/issues/32)
+- 하단 코드 타이틀에 오타있음. .ctrl 이 빠짐
+
+수정 전: src/api/posts/posts.js - read
+수정 후: src/api/posts/posts.**ctrl.**js - read
+
 ### pg.575 ([Issue #1](https://github.com/velopert/learning-react/issues/1)) ✅
 - 맨 마지막 줄
 - 괄호가 하나 빠짐
