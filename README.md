@@ -17,7 +17,7 @@ $ create-react-app sample-project --scripts-version=1.1.5
 혹은
 
 ```bash
-$ create-react-app sample-project --scripts-version=1.1.5
+$ npx create-react-app sample-project --scripts-version=1.1.5
 ```
 
 명령어를 사용하여 프로젝트를 생성하세요.
