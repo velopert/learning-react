@@ -17,3 +17,5 @@ $ npx create-react-app sample-project --scripts-version=1.1.5
 명령어를 사용하여 프로젝트를 생성하세요.
 
 추가적으로, 새로운 버전의 create-react-app 에서 어떤 변화가 있는지 참고하고싶다면 [여기](https://velog.io/@velopert/create-react-app-v2) 에서 주요 변화를 한 눈에 확인하실 수 있습니다.
+
+특히 9장. 컴포넌트 스타일링 부분에서 많은 변화가 발생했는데 9장 대신 [다양한 방식의 컴포넌트 스타일링 방식 CSS, Sass, CSS Module, styled-components](https://velog.io/@velopert/react-component-styling) 블로그 포스트를 통하여 학습하시면 도움이 될 것입니다.
