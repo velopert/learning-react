@@ -11,12 +11,6 @@
 오류 없이 책의 내용을 진행하려면
 
 ```bash
-$ create-react-app sample-project --scripts-version=1.1.5
-```
-
-혹은
-
-```bash
 $ npx create-react-app sample-project --scripts-version=1.1.5
 ```
 
