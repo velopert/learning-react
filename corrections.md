@@ -79,7 +79,7 @@ $ yarn start
 
 오탈자는 아니지만, 설명에 오해의 여지가 있어서 개선
 
-수정 전: 그냥 이름이 onClick인 props를 전달받습니다.
+수정 전: 그냥 이름이 onClick인 props를 전달받습니다.  
 수정 후: 그냥 이름이 onClick 인 props 를 MyComponent 에게 전달해줄 뿐입니다.
 
 ### pg.149 [(Issue #21)](https://github.com/velopert/learning-react/issues/21) ✅
@@ -111,7 +111,7 @@ $ yarn start
 - 오탈자는 아니지만.. 일부 환경에서 yarn eject 후 babel-loader 가 설치가 제대로 안되는 오류가 발생하고 있는데 이를 위한 해결방안 추가.
 - 다음 내용을 참고 박스 안에 넣어서 내용 추가
 
-####오류가 발생한다면? 
+#### 오류가 발생한다면? 
 
 일부 환경에서 yarn eject 후 서버를 시작 할 때 babel-loader 가 제대로 설치되어있지 않다는 오류가 발생 할 수 있습니다. 그럴 땐, yarn 명령어를 사전에 한번 실행해주면, 제대로 설치가 이뤄집니다.
 
