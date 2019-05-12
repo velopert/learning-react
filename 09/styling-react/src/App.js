@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import StyledButton from './components/StyledButton';
+import StyledComponent from './StyledComponent';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <StyledButton>버튼</StyledButton>
+        <StyledComponent />
       </div>
-    )
+    );
   }
 }
 

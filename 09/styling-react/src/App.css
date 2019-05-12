@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+/*.App 안에 들어있는 .logo*/
+.App .logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+/* .App 안에 들어있는 header 
+   header 클래스가 아닌 header 태그 자체에 
+   스타일을 적용하기 때문에 . 이 생략되었습니다. */
+.App header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* .App 안에 들어있는 a 태그 */
+.App a {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

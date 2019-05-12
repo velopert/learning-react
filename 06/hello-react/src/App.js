@@ -3,10 +3,7 @@ import IterationSample from './IterationSample';
 
 class App extends Component {
   render() {
-    return (
-      <IterationSample/>
-    );
+    return <IterationSample />;
   }
 }
-
 export default App;

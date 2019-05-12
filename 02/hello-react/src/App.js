@@ -1,37 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
-class App extends Component {
-  render() {
-    const text = '당신은 어썸한가요?';
-    const condition = true;
-    const style = {
-      backgroundColor: 'gray',
-      border: '1px solid black',
-      height: Math.round(Math.random() * 300) + 50,
-      width: Math.round(Math.random() * 300) + 50,
-      WebkitTransition: 'all',
-      MozTransition: 'all',
-      msTransition: 'all'
-    };
-
-    return (
-      <div className="my-div">
-        {/* 엘리먼트 밖에서는 이렇게 작성해요 */}
-        <h1>리액트 안녕!</h1>
-        <h2>{text}</h2>
-        { condition && '보여주세요' }
-        <div 
-          style={style}
-          // self-closed 태그에서만 작동하는 주석
-          // 마지막 /> 가 꼭 새 줄에 있어야 합니다.
-          /* 이렇게 작성할 수도 있고요 */
-        />
-        // 여기 쓰는 건 그대로 렌더링됩니다.
-        /* 여기에선 주석 못 써요 */
+function App() {
+  const name = '리액트';
+  return (
+    <>
+      {/* 주석은 이렇게 작성합니다. */}
+      <div
+        className="react" // 시작 태그를 여러 줄로 작성하게 된다면 여기에 주석을 작성 할 수 있습니다.
+      >
+        {name}
       </div>
-    );
-  }
+      // 하지만 이런 주석이나 /* 이런 주석은 페이지에 그대로 나타나게 됩니다. */
+      <input />
+    </>
+  );
 }
 
 export default App;

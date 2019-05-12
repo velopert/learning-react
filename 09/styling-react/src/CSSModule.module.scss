@@ -1,0 +1,24 @@
+/* 자동으로 고유해질 것이므로 흔히 사용되는 단어를 클래스 이름으로 마음대로 사용가능*/
+
+.wrapper {
+  background: black;
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
+  &.inverted {
+    // inverted 가 .wrapper 와 함께 사용 됐을 때만 적용
+    color: black;
+    background: white;
+    border: 1px solid black;
+  }
+}
+
+/* 글로벌 CSS 를 작성하고 싶다면 */
+:global {
+  // :global {} 로 감싸기
+  .something {
+    font-weight: 800;
+    color: aqua;
+  }
+  // 여기에 다른 클래스를 만들 수도 있겠죠?
+}
