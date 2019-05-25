@@ -1,8 +1,3 @@
-.TodoListItem-virtualized {
-  & + & {
-    border-top: 1px solid #dee2e6;
-  }
-}
 .TodoListItem {
   padding: 1rem;
   display: flex;
@@ -12,7 +7,7 @@
   }
   .checkbox {
     cursor: pointer;
-    flex: 1; // 차지 할 수 있는 영역 모두 차지
+    flex: 1; // 차지할 수 있는 영역 모두 차지
     display: flex;
     align-items: center; // 세로 중앙 정렬
     svg {
@@ -21,8 +16,9 @@
     }
     .text {
       margin-left: 0.5rem;
-      flex: 1; // 차지 할 수 있는 영역 모두 차지
+      flex: 1; // 차지할 수 있는 영역 모두 차지
     }
+    // 체크되었을 때 보여줄 스타일
     &.checked {
       svg {
         color: #22b8cf;
@@ -42,5 +38,10 @@
     &:hover {
       color: #ff8787;
     }
+  }
+
+  // 엘리먼트 사이사이에 테두리를 넣어줌
+  & + & {
+    border-top: 1px solid #dee2e6;
   }
 }
