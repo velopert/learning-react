@@ -22,7 +22,12 @@ class SelectColors extends Component {
           {colors.map(color => (
             <div
               key={color}
-              style={{ background: color, width: '24px', height: '24px' }}
+              style={{
+                background: color,
+                width: '24px',
+                height: '24px',
+                cursor: 'pointer'
+              }}
               onClick={() => this.handleSetColor(color)}
               onContextMenu={e => {
                 e.preventDefault();
