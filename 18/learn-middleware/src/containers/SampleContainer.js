@@ -25,7 +25,7 @@ const SampleContainer = ({
       }
     };
     fn();
-  }, []);
+  }, [getPost, getUsers]);
   return (
     <Sample
       post={post}
