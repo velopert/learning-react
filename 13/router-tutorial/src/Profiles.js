@@ -9,7 +9,7 @@ const Profiles = () => {
   };
   return (
     <div>
-      <h3>유저 목록:</h3>
+      <h3>사용자 목록:</h3>
       <ul>
         <li>
           <NavLink activeStyle={activeStyle} to="/profiles/velopert" active>

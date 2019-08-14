@@ -12,12 +12,12 @@ const App = () => {
     },
     {
       id: 2,
-      text: '컴포넌트 스타일링 해보기',
+      text: '컴포넌트 스타일링해 보기',
       checked: true,
     },
     {
       id: 3,
-      text: '일정 관리 앱 만들어보기',
+      text: '일정 관리 앱 만들어 보기',
       checked: false,
     },
   ]);
