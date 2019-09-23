@@ -29,10 +29,10 @@ export default connect(
   ({ sample, loading }) => ({
     post: sample.post,
     users: sample.users,
--    loadingPost: loading.GET_POST,
--    loadingUsers: loading.GET_USERS
-+    loadingPost: loading['sample/GET_POST'],
-+    loadingUsers: loading['sample/GET_USERS']
+-   loadingPost: loading.GET_POST,
+-   loadingUsers: loading.GET_USERS
++   loadingPost: loading['sample/GET_POST'],
++   loadingUsers: loading['sample/GET_USERS']
   }),
   {
     getPost,
@@ -50,8 +50,8 @@ chunks.js 로 끝나는 키를 찾아서 스크립트 태그로 변환하는 부
 ```diff
 const chunks = Object.keys(manifest.files)
   .filter(key => /chunk\.js$/.exec(key)) // chunks.js 로 끝나는 키를 찾아서
--  .map(key => `<script src="${manifest[key]}"></script>) // 스크립트 태그로 변환하고
-+  .map(key => `<script src="${manifest.files[key]}"></script>) // 스크립트 태그로 변환하고
+- .map(key => `<script src="${manifest[key]}"></script>) // 스크립트 태그로 변환하고
++ .map(key => `<script src="${manifest.files[key]}"></script>) // 스크립트 태그로 변환하고
   .join(''); // 합침
 ```
 
