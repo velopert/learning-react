@@ -1,8 +1,17 @@
 # 오탈자 및 개선사항
 
+## 4.2.2.1 (pg. 127)
+
+페이지 상단의 설명에 오탈자가 있습니다.
+
+```diff
+- SyntheticEvent 및 네이티브 이벤트와 달리 이벤트가 끝나고 나면...
++ SyntheticEvent는 네이티브 이벤트와 달리 이벤트가 끝나고 나면...
+```
+
 ## 16.2.10 (pg. 426)
 
-페이지 하단 설명에 오타가 있습니다.
+페이지 하단 설명에 오탈자가 있습니다.
 
 17.1 절이 아니라 16.1 절로 돌아가야합니다.
 
@@ -48,7 +57,7 @@ const chunks = Object.keys(manifest.files)
 
 ## 23.4.2 (pg. 697)
 
-user.js 파일의 경로에 오타가 있습니다. `modles` 디렉터리가 아닌 `models` 디렉터리입니다.
+user.js 파일의 경로에 오탈자가 있습니다. `modles` 디렉터리가 아닌 `models` 디렉터리입니다.
 
 ```
 - src/modles/user.js - generateToken
