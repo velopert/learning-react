@@ -85,41 +85,16 @@ input {
 `ownPost` 값을 설정하는 로직에 오탈자가 있습니다.
 
 ```diff
++ const ownPost = user && user.id === post && post.user.id;
+
+  return (
     <PostViewer
       post={post}
       loading={loading}
       error={error}
-      actionButtons={<PostActionButtons onEdit={onEdit} onRemove={onRemove} />}
+-     actionButtons={<PostActionButtons onEdit={onEdit} onRemove={onRemove} />}
++     actionButtons={ownPost && <PostActionButtons onEdit={onEdit} onRemove={onRemove} />}
 -     ownPost={user && user.id === post && post.id}
-+     ownPost={user && user.id === post && post.user.id}
     />
-```
-
-추가적으로, PostViewer 컴포넌트에서 `ownPost` 값이 `true` 일 때에만 `actionButtons`를 렌더링 하는 작업이 필요합니다. (해당 내용이 책에서 생략되었습니다.)
-
-#### components/post/PostViewer.js
-
-```diff
-(...)
-const PostViewer = ({ post, error, loading, actionButtons, ownPost }) => {
-  (...)
-  return (
-    <PostViewerBlock>
-      <PostHead>
-        <h1>{title}</h1>
-        <SubInfo
-          username={user.username}
-          publishedDate={publishedDate}
-          hasMarginTop
-        />
-        <Tags tags={tags} />
-      </PostHead>
--       {actionButtons}
-+       {ownPost && actionButtons}
-      <PostContent dangerouslySetInnerHTML={{ __html: body }} />
-    </PostViewerBlock>
   );
-}
-
-export defualt PostViewer;
 ```
