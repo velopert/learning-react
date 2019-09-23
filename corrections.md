@@ -76,7 +76,6 @@ user.js 파일의 경로에 오탈자가 있습니다. `modles` 디렉터리가 
 input {
   padding: 0.5rem;
   flex: 1;
-
 + min-width: 0;
 }
 ```
