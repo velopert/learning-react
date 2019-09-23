@@ -45,3 +45,12 @@ const chunks = Object.keys(manifest.files)
 +  .map(key => `<script src="${manifest.files[key]}"></script>) // 스크립트 태그로 변환하고
   .join(''); // 합침
 ```
+
+## 23.4.2 (pg. 697)
+
+user.js 파일의 경로에 오타가 있습니다. `modles` 디렉터리가 아닌 `models` 디렉터리입니다.
+
+```
+- src/modles/user.js - generateToken
++ src/models/user.js - generateToken
+```
