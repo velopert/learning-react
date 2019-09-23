@@ -54,3 +54,19 @@ user.js 파일의 경로에 오타가 있습니다. `modles` 디렉터리가 아
 - src/modles/user.js - generateToken
 + src/models/user.js - generateToken
 ```
+
+## 25.2.1 (pg. 814)
+
+일부 환경에서 TagForm 이 다음과 같이 버튼이 찌그러지는 현상이 나타납니다.
+
+![](https://user-images.githubusercontent.com/17894639/65041447-c039a780-d991-11e9-8bb7-b9a3419eed90.png)
+
+해결 방안은 input 태그에 `min-width: 0;` 속성을 넣는 것 입니다.
+
+```diff
+input {
+  padding: 0.5rem;
+  flex: 1;
+  + min-width: 0;
+}
+```
