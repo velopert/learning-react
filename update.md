@@ -15,3 +15,10 @@
 - [697](https://github.com/velopert/learning-react/blob/master/corrections.md#2342-pg-697)
 - [814](https://github.com/velopert/learning-react/blob/master/corrections.md#2521-pg-814)
 - [880](https://github.com/velopert/learning-react/blob/master/corrections.md#2712-pg-880)
+
+## 2019.9.30
+
+오탈자 리스트가 업데이트 되었습니다.
+
+- [470](https://github.com/velopert/learning-react/blob/master/corrections.md#1776-pg-470)
+- [784](https://github.com/velopert/learning-react/blob/master/corrections.md#2426-pg-784)
