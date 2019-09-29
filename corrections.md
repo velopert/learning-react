@@ -64,6 +64,17 @@ user.js 파일의 경로에 오탈자가 있습니다. `modles` 디렉터리가 
 + src/models/user.js - generateToken
 ```
 
+## 24.2.6 (pg. 784)
+
+비밀번호가 일치하지 않을 때 액션을 디스패치하는 부분에 오탈자가 있습니다. 액션 생성 함수를 호출 후 dispatch 해주어야합니다.
+
+```
+- changeField({ form: 'register', key: 'password', value: '' });
+- changeField({ form: 'register', key: 'passwordConfirm', value: '' });
++ dispatch(changeField({ form: 'register', key: 'password', value: '' }));
++ dispatch(changeField({ form: 'register', key: 'passwordConfirm', value: '' }));
+```
+
 ## 25.2.1 (pg. 814)
 
 일부 환경에서 TagForm 이 다음과 같이 버튼이 찌그러지는 현상이 나타납니다.
