@@ -20,6 +20,15 @@
 + 모두 제대로 작동한다면 16.1절로 돌아가서 다시 한번 개념을 훑어 보세요. 그리고 다음 내용을 계속 진행해주세요.
 ```
 
+## 17.7.6 (pg. 470)
+
+파일명이 잘못되었습니다.
+
+```diff
+- containers/CounterContainer.js
++ containers/TodosContainer.js
+```
+
 ## 18.3.1.5 (pg.500)
 
 페이지 상단 `connect` 함수의 `loadingPost` 와 `loadingUsers` 부분에 오탈자가 있습니다.
