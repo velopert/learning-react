@@ -12,7 +12,7 @@ const RegisterForm = ({ history }) => {
     form: auth.register,
     auth: auth.auth,
     authError: auth.authError,
-    user: user.user
+    user: user.user,
   }));
   // 인풋 변경 이벤트 핸들러
   const onChange = e => {
@@ -21,8 +21,8 @@ const RegisterForm = ({ history }) => {
       changeField({
         form: 'register',
         key: name,
-        value
-      })
+        value,
+      }),
     );
   };
 
@@ -38,8 +38,10 @@ const RegisterForm = ({ history }) => {
     // 비밀번호가 일치하지 않는다면
     if (password !== passwordConfirm) {
       setError('비밀번호가 일치하지 않습니다.');
-      changeField({ form: 'register', key: 'password', value: '' });
-      changeField({ form: 'register', key: 'passwordConfirm', value: '' });
+      dispatch(changeField({ form: 'register', key: 'password', value: '' }));
+      dispatch(
+        changeField({ form: 'register', key: 'passwordConfirm', value: '' }),
+      );
       return;
     }
     dispatch(register({ username, password }));
