@@ -105,7 +105,7 @@ input {
 `ownPost` 값을 설정하는 로직에 오탈자가 있습니다. 추가적으로 PostViewer 에서 `ownPost` 를 사용하는 코드가 빠졌습니다. 따라서, 페이지에 최소한의 수정을 하기 위하여 `ownPost` 라는 상수를 따로 선언하고 `actionButtons` props 를 설정하는 과정에서 조건부 렌더링을 하는 방식으로 수정됐습니다.
 
 ```diff
-+ const ownPost = user && user.id === post && post.user.id;
++ const ownPost = (user && user.id) === (post && post.user.id);
 
   return (
     <PostViewer

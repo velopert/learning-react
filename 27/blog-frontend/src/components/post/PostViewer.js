@@ -55,7 +55,7 @@ const PostViewer = ({ post, error, loading, actionButtons, ownPost }) => {
         />
         <Tags tags={tags} />
       </PostHead>
-      {ownPost && actionButtons}
+      {actionButtons}
       <PostContent dangerouslySetInnerHTML={{ __html: body }} />
     </PostViewerBlock>
   );
