@@ -68,8 +68,6 @@ export default connect(
 
 ## 20.3.5 (pg. 560)
 
-chunks.js 로 끝나는 키를 찾아서 스크립트 태그로 변환하는 부분에 오탈자가 있습니다.
-
 `manifest[key]` 가 아닌 `manifest.files[key]` 로 바꿔주어야 합니다.
 
 ```diff
@@ -78,6 +76,23 @@ const chunks = Object.keys(manifest.files)
 - .map(key => `<script src="${manifest[key]}"></script>) // 스크립트 태그로 변환하고
 + .map(key => `<script src="${manifest.files[key]}"></script>) // 스크립트 태그로 변환하고
   .join(''); // 합침
+```
+
+그리고 그 하단의 `main.css` 와 `main.js` 도 마찬가지로 `manifest[]` 대신 `manifest.files[]` 를 사용하세요. `runtime~main.js` 의 경우도 마찬가지이며, 최근 CRA 업데이트로 인하여 기존 `runtime~main.js` 에서 `runtime-main.js` 로 파일 이름이 변경되었습니다.
+
+```diff
+- <link href="${manifest['main.css']}" rel="stylesheet" />
++ <link href="${manifest.files['main.css']}" rel="stylesheet" />
+```
+
+```diff
+- <script src="${manifest['runtime~main.js']}"></script>
++ <script src="${manifest.files['runtime-main.js']}"></script>
+```
+
+```diff
+- <script src="${manifest['main.js']}"></script>
++ <script src="${manifest.files['main.js']}"></script>
 ```
 
 ## 23.4.2 (pg. 697)
