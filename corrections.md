@@ -9,6 +9,22 @@
 + SyntheticEvent는 네이티브 이벤트와 달리 이벤트가 끝나고 나면...
 ```
 
+## 8.2.3 (pg. 199) - 개선사항
+
+`useEffect`를 사용하는 부분의 deps 배열이 비어있어서 ESLint 경고가 나타납니다. 이 경고를 없애기 위하여 deps 배열에 name 을 넣어주세요.
+
+```diff
+useEffect(() => {
+  console.log('effect');
+  console.log(name);
+  return () => {
+    console.log('cleanup');
+    console.log(name);
+  };
+- }, []);
++ }, [name]);
+```
+
 ## 16.2.10 (pg. 426)
 
 페이지 하단 설명에 오탈자가 있습니다.
