@@ -95,6 +95,21 @@ const chunks = Object.keys(manifest.files)
 + <script src="${manifest.files['main.js']}"></script>
 ```
 
+## 22.2 (pg. 641)
+
+macOS에서 MongoDB 설치하는 명령어가 바뀌었습니다.
+
+```diff
+- $ brew update
+- $ brew install mongodb
+- $ brew services start mongodb
+- ==> Successfully started `mongodb` (label: homebrew.mxcl.mongodb)\
++ $ brew tap mongodb/brew
++ $ brew install mongodb-community@4.2
++ $ brew services start mongodb-community@4.2
++ ==> Successfully started `mongodb-community` (label: homebrew.mxcl.mongodb-community)
+```
+
 ## 23.4.2 (pg. 697)
 
 user.js 파일의 경로에 오탈자가 있습니다. `modles` 디렉터리가 아닌 `models` 디렉터리입니다.
