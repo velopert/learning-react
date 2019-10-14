@@ -95,7 +95,7 @@ const chunks = Object.keys(manifest.files)
 + <script src="${manifest.files['main.js']}"></script>
 ```
 
-## 22.2 (pg. 641)
+## 22.2 (pg. 641) - 업데이트
 
 macOS에서 MongoDB 설치하는 명령어가 바뀌었습니다.
 

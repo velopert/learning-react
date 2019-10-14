@@ -22,3 +22,11 @@
 
 - [470](https://github.com/velopert/learning-react/blob/master/corrections.md#1776-pg-470)
 - [784](https://github.com/velopert/learning-react/blob/master/corrections.md#2426-pg-784)
+
+## 2019.10.15
+
+오탈자 리스트 및 개선사항이 업데이트 되었습니다.
+
+- [560](https://github.com/velopert/learning-react/blob/master/corrections.md#222-pg-641): CRA 업데이트로 인하여 runtime~main.js 가 runtime-main.js 로 이름 변경
+- [641](https://github.com/velopert/learning-react/blob/master/corrections.md#222-pg-641): MongoDB macOS 설치 명령어 업데이트
+- [880](https://github.com/velopert/learning-react/blob/master/corrections.md#222-pg-641): ownPost 실수
