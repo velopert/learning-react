@@ -30,3 +30,9 @@
 - [560](https://github.com/velopert/learning-react/blob/master/corrections.md#222-pg-641): CRA 업데이트로 인하여 runtime~main.js 가 runtime-main.js 로 이름 변경
 - [641](https://github.com/velopert/learning-react/blob/master/corrections.md#222-pg-641): MongoDB macOS 설치 명령어 업데이트
 - [880](https://github.com/velopert/learning-react/blob/master/corrections.md#222-pg-641): ownPost 실수
+
+## 2019.10.17
+
+yarn 설치 방법이 바뀌었습니다.
+
+- [46](https://github.com/velopert/learning-react/blob/master/corrections.md#132-pg-46)
