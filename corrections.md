@@ -1,5 +1,17 @@
 # 오탈자 및 개선사항
 
+## 1.3.2 yarn
+
+macOS에서 yarn 설치 방법이 바뀌었습니다. 명령어에 `--without-node`를 없애야 합니다.
+
+```diff
+$ brew update
+- $ brew install yarn --without-node
++ $ brew instal yarn
+$ yarn config set prefix ~/.yarn
+$ echo 'export PATH="$(yarn global bin):$PATH"' >> ~/.bash_profile
+```
+
 ## 4.2.2.1 (pg. 127)
 
 페이지 상단의 설명에 오탈자가 있습니다.
