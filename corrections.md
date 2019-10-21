@@ -179,7 +179,7 @@ input {
 
 ## 27.2 (pg. 892)
 
-pg.890과 같은 이유로 수정되었습니다.
+pg.880과 같은 이유로 수정되었습니다.
 
 ```diff
 + const ownPost = (user && user._id) === (post && post.user._id);
