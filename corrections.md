@@ -15,6 +15,64 @@
 - 이 함수가 호출되면 현재 클래스형 컴포넌트가 상속받고 있는 리액트의...
 ```
 
+## 9.2.2 (pg. 230, 231)
+
+`sass-loader`가 업데이트 됨에 따라 설정 방법이 바뀌었습니다. `includePaths`를 설정 할 때 `sassOptions` 객체 안에 넣어서 설정하셔야 합니다.
+
+```diff
+{
+  test: sassRegex,
+  exclude: sassModuleRegex,
+  use: getStylesLoaders({
+    importLoaders: 2,
+    sourceMap: isEnvProduction && shouldUseSourceMap
+-  }).concat({
+-    loader: require.resolve('sass-loader'),
+-    options: {
+-      includePaths: [paths.appSrc + '/styles'],
+-      sourceMap: isEnvProduction && shouldUseSourceMap }
+-  }),
++  }).concat({
++    loader: require.resolve('sass-loader'),
++    options: {
++      sassOptions: {
++        includePaths: [paths.appSrc + '/styles']
++      },
++      sourceMap: isEnvProduction && shouldUseSourceMap,
++    }
++  }),
+  sideEffects: true
+}
+```
+
+추가적으로, `data` 가 `prependData` 로 변경됐습니다.
+
+```diff
+{
+  test: sassRegex,
+  exclude: sassModuleRegex,
+  use: getStylesLoaders({
+    importLoaders: 2,
+    sourceMap: isEnvProduction && shouldUseSourceMap
+  }).concat({
+    loader: require.resolve('sass-loader'),
+-    options: {
+-      includePaths: [paths.appSrc + '/styles'],
+-      sourceMap: isEnvProduction && shouldUseSourceMap,
+-      data: `@import 'utils';`
+-    }
++    options: {
++      sassOptions: {
++        includePaths: [paths.appSrc + '/styles']
++      },
++      sourceMap: isEnvProduction && shouldUseSourceMap,
++      prependData: `@import 'utils';`
++    }
+  }),
+  sideEffects: true
+}
+```
+
 ## 11.6 (pg. 302)
 
 헷갈릴 수 있는 설명이 있어서 이를 수정합니다.
