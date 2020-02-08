@@ -70,6 +70,52 @@ async function runTasks() {
 }
 ```
 
+## 22.9.2 (pg.669 - 672)
+
+기존 `joi` 모듈이 deprecated 되고, `@hapi/joi` 로 이름이 바뀌었습니다. 따라서 설치 방법도 바뀌고, 사용 방법도 조금 바뀌었습니다. 기존에 `Joi.validate` 가 `schema.validate` 로 바뀝니다.
+
+설치 방법 변경:
+
+```diff
+- yarn add joi
++ yarn add @hapi/joi
+```
+
+**posts.ctrl.js** - import 하는 부분과 write 함수에서 validate 부분 코드 변경
+
+```diff
+- import Joi from 'joi';
++ import Joi from '@hapi/joi';
+```
+
+```diff
+// 검증하고 나서 검증 실패인 경우 에러 처리
+- const result = Joi.validate(ctx.request.body, schema);
++ const result = schema.validate(ctx.request.body);
+```
+
+**posts.ctrl.js** - update 부분도 변경
+
+```diff
+- const result = Joi.validate(ctx.request.body, schema);
++ const result = schema.validate(ctx.request.body);
+```
+
+## 23.3.1 (pg.691)
+
+Joi 버전이 업데이트됨에 따라 코드도 업데이트 합니다.
+
+```diff
++ import Joi from '@hapi/joi';
+- import Joi from 'joi';
+import User from '../../models/user';
+```
+
+```diff
++ const result = schema.validate(ctx.request.body);
+- const result = Joi.validate(ctx.request.body, schema);
+```
+
 ## 22.4 (pg. 646)
 
 ESModule 기능이 Node v12에서 정식 지원되지 않았는데, 잘못된 정보가 기재되었습니다. 따라서, pg 646의 **Node.js v12부터 ES Module 정식 지원** 참고 블록을 무시해주세요.
@@ -79,8 +125,8 @@ ESModule 기능이 Node v12에서 정식 지원되지 않았는데, 잘못된 �
 `username`을 `match.params` 에서 조회해야 하는데 `query`에서 조회를 하는 실수가 있었습니다. `match.params` 에서 불러오도록 수정합니다.
 
 ```diff
--const PostListContainer = ({ location }) => {
-+const PostListContainer = ({ location, match }) => {
+- const PostListContainer = ({ location }) => {
++ const PostListContainer = ({ location, match }) => {
 ```
 
 ```diff
