@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "nodemon": "^1.18.11"
+    "nodemon": "^2.0.2"
   },
   "scripts": {
     "start": "node -r esm src",

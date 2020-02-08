@@ -65,6 +65,41 @@ async function runTasks() {
 
 ESModule 기능이 Node v12에서 정식 지원되지 않았는데, 잘못된 정보가 기재되었습니다. 따라서, pg 646의 **Node.js v12부터 ES Module 정식 지원** 참고 블록을 무시해주세요.
 
+## 26.2.2 (pg. 857 - 858)
+
+`username`을 `match.params` 에서 조회해야 하는데 `query`에서 조회를 하는 실수가 있었습니다. `match.params` 에서 불러오도록 수정합니다.
+
+```diff
+-const PostListContainer = ({ location }) => {
++const PostListContainer = ({ location, match }) => {
 ```
 
+```diff
+  useEffect(() => {
++    const { username } = match.params;
++    const { tag, page } = qs.parse(location.search, {
+-    const { tag, username, page } = qs.parse(location.search, {
+      ignoreQueryPrefix: true,
+    });
+    dispatch(listPosts({ tag, username, page }));
+  }, [dispatch, location.search]);
+```
+
+## 26.2.4 (pg. 869 - 870)
+
+`username`을 `match.params` 에서 조회해야 하는데 `query`에서 조회를 하는 실수가 있었습니다. `match.params` 에서 불러오도록 수정합니다.
+
+```diff
++const PaginationContainer = ({ location, match }) => {
+-const PaginationContainer = ({ location }) => {
+```
+
+```diff
++  const { username } = match.params;
+
+  // page가 없으면 1을 기본값으로 사용
++  const { tag, page = 1 } = qs.parse(location.search, {
+-  const { tag, username, page = 1 } = qs.parse(location.search, {
+    ignoreQueryPrefix: true,
+  });
 ```
