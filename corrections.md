@@ -170,7 +170,26 @@ input {
       post={post}
       loading={loading}
       error={error}
--     actionButtons={<PostActionButtons onEdit={onEdit} onRemove={onRemove} />}
+-     actionButtons={<PostActionButtons onEdit={onEdit} />}
++     actionButtons={ownPost && <PostActionButtons onEdit={onEdit} />}
+-     ownPost={user && user.id === post && post.id}
+    />
+  );
+```
+
+## 27.2 (pg. 892)
+
+pg.880과 같은 이유로 수정되었습니다.
+
+```diff
++ const ownPost = (user && user._id) === (post && post.user._id);
+
+  return (
+    <PostViewer
+      post={post}
+      loading={loading}
+      error={error}
+-     actionButtons={<PostActionButtons onEdit={onEdit} />}
 +     actionButtons={ownPost && <PostActionButtons onEdit={onEdit} onRemove={onRemove} />}
 -     ownPost={user && user.id === post && post.id}
     />
