@@ -128,6 +128,18 @@ async function runTasks() {
 }
 ```
 
+## 17.6.1.2 (pg. 460)
+
+`REMOVE` 액션 리듀서에서 `action.payload`를 사용해야 하는데 `action.id`를 사용하고 있습니다.
+
+```diff
+  [REMOVE]: (state, action) => ({
+    ...state,
++    todos: state.todo.filter(todo => todo.id !== action.payload)
+-    todos: state.todo.filter(todo => todo.id !== action.id)
+  })
+```
+
 ## 20.3.2 (pg. 549-550) 업데이트
 
 css-loader가 업데이트 됨에 따라 기존 `exportOnlyLocals` 라는 옵션이 `onlyLocals`로 변경되었습니다.
