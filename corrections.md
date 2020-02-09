@@ -187,6 +187,10 @@ const LoadablePlugin = require('@loadable/webpack-plugin');
 + const result = schema.validate(ctx.request.body);
 ```
 
+## 22.4 (pg. 646) 정정
+
+ESModule 기능이 Node v12에서 정식 지원되지 않았는데, 잘못된 정보가 기재되었습니다. 따라서, pg 646의 **Node.js v12부터 ES Module 정식 지원** 참고 블록을 무시해주세요.
+
 ## 23.3.1 (pg.691) 업데이트
 
 Joi 버전이 업데이트됨에 따라 코드도 업데이트 합니다.
@@ -201,10 +205,6 @@ import User from '../../models/user';
 + const result = schema.validate(ctx.request.body);
 - const result = Joi.validate(ctx.request.body, schema);
 ```
-
-## 22.4 (pg. 646) 정정
-
-ESModule 기능이 Node v12에서 정식 지원되지 않았는데, 잘못된 정보가 기재되었습니다. 따라서, pg 646의 **Node.js v12부터 ES Module 정식 지원** 참고 블록을 무시해주세요.
 
 ## 26.2.2 (pg. 857 - 858) 실수
 
