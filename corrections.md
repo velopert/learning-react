@@ -128,7 +128,7 @@ async function runTasks() {
 }
 ```
 
-## 17.6.1.2 (pg. 460)
+## 17.6.1.2 (pg. 460) 오탈자
 
 `REMOVE` 액션 리듀서에서 `action.payload`를 사용해야 하는데 `action.id`를 사용하고 있습니다.
 
