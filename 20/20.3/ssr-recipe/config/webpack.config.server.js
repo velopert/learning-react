@@ -9,8 +9,7 @@ const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 
-const publicUrl = paths.servedPath.slice(0, -1);
-const env = getClientEnvironment(publicUrl);
+const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));
 
 module.exports = {
   mode: 'production',
@@ -20,7 +19,7 @@ module.exports = {
     path: paths.ssrBuild,
     filename: 'server.js',
     chunkFilename: 'js/[name].chunk.js',
-    publicPath: paths.servedPath
+    publicPath: paths.publicUrlOrPath
   },
   module: {
     rules: [
