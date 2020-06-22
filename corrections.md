@@ -7,6 +7,22 @@
 - [개정판-2쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-2%EC%87%84.md)
 
 
+## 13.4 오탈자
+
+설명에서는 `/profiles` 라고 적혀있지만 실제 코드에서는 `/profile` 를 사용하고 있습니다. 따라서, 기존의 설명들을 모두 수정합니다.
+
+1. pg.335
+```diff
+- 파라미터 예시: /profiles/velopert
++ 파라미터 예시: /profile/velopert
+```
+
+2. pg. 336
+```diff
+- 이번에 사용할 path 규칙에는 /profiles/:username이라고 넣어 주면 됩니다.
++ 이번에 사용할 path 규칙에는 /profile/:username이라고 넣어 주면 됩니다.
+```
+
 ## 20.3.2 (pg.546 ~ 552) 업데이트
 
 CRA 업데이트 됨에 따라 paths 부분이 변경되어 이에 따라 SSR 전용 웹팩 환경설정 코드를 변경해야합니다.
