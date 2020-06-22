@@ -123,7 +123,7 @@ generator.next();
 generator.next();
 -// 제너레이터 함수
 +// function*
-// { value: 2, done: false }
+// { value: 3, done: false }
 ```
 
 ## 20.3.2 (pg.546 ~ 552) 업데이트
