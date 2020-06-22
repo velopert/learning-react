@@ -193,7 +193,7 @@ export const update = async ctx => {
   const nextData = { ...ctx.request.body }; // 객체를 복사하고
   // body 값이 주어졌으면 HTML 필터링
   if (nextData.body) {
-    nextData.body = sanitizeHtml(nextData.body);
+    nextData.body = sanitizeHtml(nextData.body, sanitizeOption);
   }
   try {
     const post = await Post.findByIdAndUpdate(id, nextData, {

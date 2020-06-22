@@ -76,3 +76,14 @@ module.exports = {
 - const env = getClientEnvironment(publicUrl)
 + const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));
 ```
+
+
+## 26.2.3 코드 수정 (pg. 864)
+
+업데이트 할 때 `sanitizeOption`이 빠져서 태그가 모두 사라지는 현상이 발생합니다. 이를 고치기 위하여 update API에도 `sanitizeHtml` 을 사용 할 때 `sanitizeOption` 을 두번째 파라미터로 넣어주어야 합니다.
+
+```diff
+-   nextData.body = sanitizeHtml(nextData.body);
++   nextData.body = sanitizeHtml(nextData.body, sanitizeOption);
+```
+
