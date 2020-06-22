@@ -52,6 +52,15 @@ ReactDOM.render(
 + 이번에 사용할 path 규칙에는 /profile/:username이라고 넣어 주면 됩니다.
 ```
 
+## 13.6.4 오탈자 (pg. 351)
+
+불필요한 active 키워드가 포함되어있습니다.
+
+```diff
+- <NavLink activeStyle={activeStyle} to="/profiles/velopert" active>
++ <NavLink activeStyle={activeStyle} to="/profiles/velopert">
+```
+
 ## 18.3.2.1 오탈자 (pg. 503)
 
 주석 결과가 잘못 표기되어있음
