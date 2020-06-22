@@ -52,6 +52,20 @@ ReactDOM.render(
 + 이번에 사용할 path 규칙에는 /profile/:username이라고 넣어 주면 됩니다.
 ```
 
+## 18.3.2.1 오탈자 (pg. 503)
+
+주석 결과가 잘못 표기되어있음
+
+```diff
+generator.next();
+// 제너레이터 함수
+// { value: 2, done: false }
+generator.next();
+-// 제너레이터 함수
++// function*
+// { value: 2, done: false }
+```
+
 ## 20.3.2 (pg.546 ~ 552) 업데이트
 
 CRA 업데이트 됨에 따라 paths 부분이 변경되어 이에 따라 SSR 전용 웹팩 환경설정 코드를 변경해야합니다.
