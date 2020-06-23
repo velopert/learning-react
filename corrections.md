@@ -21,7 +21,9 @@ ReactDOM.render(
 ```
 
 
-### 참고 박스 추가:
+### 참고 박스 추가: 
+
+추가 위치:  ReactDOM.render는 무엇인가요? 하단
 
 > **React.StrictMode는 무엇인가요?**
 > `React.StrictMode`는 리액트 프로젝트에서 리액트의 레거시 기능들을 사용하지 못하게 하는 기능입니다. 이를 사용하면 문자열 `ref`, `componentWillMount` 등 나중에는 완전히 사라지게 될 옛날 기능들을 사용했을 때 경고를 출력합니다. 
