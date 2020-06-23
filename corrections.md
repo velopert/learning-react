@@ -89,7 +89,7 @@ ReactDOM.render(
 
 ## 13.4 오탈자
 
-설명에서는 `/profiles` 라고 적혀있지만 실제 코드에서는 `/profile` 를 사용하고 있습니다. 따라서, 기존의 설명들을 모두 수정합니다.
+설명에서는 `/profiles` 라고 적혀있지만 실제 코드에서는 `/profile` 를 사용하고 있습니다. 따라서, 기존의 설명들을 모두 수정합니다. (13.5 이후의 예시들은 /profiles를 사용하고 있으며, 이는 그대로 유지합니다.)
 
 1. pg.335
 ```diff
@@ -158,7 +158,7 @@ module.exports = {
 ```
 
 
-2. pg.547 `config/webpack.config.sever.js`
+2. pg.547 `config/webpack.config.server.js`
 
 ```diff
   output: {
