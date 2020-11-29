@@ -20,7 +20,7 @@ pg. 443-444
 pg. 445
 pg. 474
 pg. 479
-pg. 481
+pg. 480-481
 pg. 484
 pg. 507
 pg. 509
@@ -30,7 +30,38 @@ pg. 580
 pg. 723
 pg. 730-731
 pg. 768
+pg. 799-800
 pg. 893
+
+## 8.2.3 오탈자 pg.197
+
+useEffect 부분에 deps 배열이 빠져있습니다.
+
+```javascript
+useEffect(() => {
+  console.log('effect');
+  console.log(name);
+  return () => {
+    console.log('cleanup');
+    console.log(name);
+  };
+}, [name]);
+```
+
+## 8.2.3 오탈자 pg.199
+
+배열을 비워야 합니다.
+
+```javascript
+useEffect(() => {
+  console.log('effect');
+  console.log(name);
+  return () => {
+    console.log('cleanup');
+    console.log(name);
+  };
+}, []);
+```
 
 ### 20.3.2 업데이트 (pg.546 - pg.547)
 
@@ -235,3 +266,17 @@ module.exports = {
   ],
 }
 ```
+
+## 22.9.2 업데이트 pg.669
+
+@hapi/joi 에서 joi 로 변경되었습니다.
+
+```
+$ yarn add @hapi/joi
+```
+
+```javascript
+import Joi from 'joi';
+```
+
+영향 가는 페이지: 691, 861, 862,
