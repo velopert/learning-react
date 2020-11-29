@@ -240,9 +240,6 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new webpack.DefinePlugin(env.stringified), // 환경변수를 주입해줍니다.
-  ],
 };
 ```
 
