@@ -9,7 +9,7 @@
 
 ### 모든 프로젝트의 index.js
 
-기존에는 src/index.js 파일에 serviceWorker.js 파일을 불러와서 `serviceWorker.unregister()` 가 있었는데 CRA가 업데이트 되면서 해당 부분이 사라졌습니다. 따라서 해당 부분은 모두 무시하시면 됩니다.
+기존에는 src/index.js 파일에 serviceWorker.js 파일을 불러와서 `serviceWorker.unregister()` 가 있었는데 CRA가 업데이트 되면서 해당 부분이 사라졌습니다. 따라서 해당 부분은 모두 무시하시면 됩니다. 또한, import serviceWorker 부분도 무시하시면 됩니다.
 
 영향이 가는 페이지
 
