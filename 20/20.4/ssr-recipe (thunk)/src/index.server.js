@@ -17,8 +17,8 @@ const manifest = JSON.parse(
 );
 
 const chunks = Object.keys(manifest.files)
-  .filter(key => /chunk\.js$/.exec(key)) // chunk.js로 끝나는 키를 찾아서
-  .map(key => `<script src="${manifest.files[key]}"></script>`) // 스크립트 태그로 변환하고
+  .filter((key) => /chunk\.js$/.exec(key)) // chunk.js로 끝나는 키를 찾아서
+  .map((key) => `<script src="${manifest.files[key]}"></script>`) // 스크립트 태그로 변환하고
   .join(''); // 합침
 
 function createPage(root, stateScript) {
@@ -59,7 +59,7 @@ const serverRender = async (req, res, next) => {
   const store = createStore(rootReducer, applyMiddleware(thunk));
   const preloadContext = {
     done: false,
-    promises: []
+    promises: [],
   };
 
   const jsx = (
@@ -91,7 +91,7 @@ const serverRender = async (req, res, next) => {
 };
 
 const serve = express.static(path.resolve('./build'), {
-  index: false // "/" 경로에서 index.html 을 보여주지 않도록 설정
+  index: false, // "/" 경로에서 index.html 을 보여주지 않도록 설정
 });
 
 app.use(serve); // 순서가 중요합니다. serverRender 전에 위치해야 합니다.

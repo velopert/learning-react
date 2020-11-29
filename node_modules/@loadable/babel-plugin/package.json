@@ -1,0 +1,34 @@
+{
+  "name": "@loadable/babel-plugin",
+  "description": "Babel plugin for loadable (required for SSR).",
+  "version": "5.13.2",
+  "main": "lib/index.js",
+  "repository": "git@github.com:gregberge/loadable-components.git",
+  "author": "Greg Bergé <berge.greg@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "loadable"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/gregberge"
+  },
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "shx rm -rf lib",
+    "build": "BUILD_TARGET=node babel --config-file ../../babel.config.js -d lib --ignore \"**/*.test.js\" src",
+    "prepublishOnly": "yarn run build"
+  },
+  "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0-0"
+  },
+  "gitHead": "94e0c424c9928702842f820ff471852843ee13fb"
+}

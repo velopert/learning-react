@@ -59,7 +59,7 @@ const serverRender = async (req, res, next) => {
 
   const preloadContext = {
     done: false,
-    promises: []
+    promises: [],
   };
 
   // 필요한 파일 추출하기 위한 ChunkExtractor
@@ -96,14 +96,14 @@ const serverRender = async (req, res, next) => {
   const tags = {
     scripts: stateScript + extractor.getScriptTags(), // 스크립트 앞부분에 리덕스 상태 넣기
     links: extractor.getLinkTags(),
-    styles: extractor.getStyleTags()
+    styles: extractor.getStyleTags(),
   };
 
   res.send(createPage(root, tags)); // 결과물을 응답합니다.
 };
 
 const serve = express.static(path.resolve('./build'), {
-  index: false // "/" 경로에서 index.html 을 보여주지 않도록 설정
+  index: false, // "/" 경로에서 index.html 을 보여주지 않도록 설정
 });
 
 app.use(serve); // 순서가 중요합니다. serverRender 전에 위치해야 합니다.

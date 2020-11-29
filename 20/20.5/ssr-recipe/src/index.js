@@ -2,14 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer, { rootSaga } from './modules';
-import { loadableReady } from '@loadable/component';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -21,27 +20,19 @@ const store = createStore(
 
 sagaMiddleware.run(rootSaga);
 
-// 같은 내용을 쉽게 재사용 할 수 있도록 렌더링 할 내용을 하나의 컴포넌트로 묶음
-const Root = () => {
-  return (
+ReactDOM.render(
+  <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
     </Provider>
-  );
-};
+    ,
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-const root = document.getElementById('root');
-
-// 프로덕션 환경 에서는 loadableReady 와 hydrate 를 사용하고
-// 개발 환경에서는 기존 하던 방식으로 처리
-if (process.env.NODE_ENV === 'production') {
-  loadableReady(() => {
-    ReactDOM.hydrate(<Root />, root);
-  });
-} else {
-  ReactDOM.render(<Root />, root);
-}
-
-serviceWorker.unregister();
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
