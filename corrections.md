@@ -34,7 +34,7 @@ node-sass 최신 버전이 현재 create-react-app에서 작동하지 않습니�
 + $ yarn add node-sass@4.14.1
 ```
 
-문구 추가: 2021년 1월 기준, node-sass의 최신 버전이 create-react-app 에서 지원되고 있지 않습니다. 따라서, 구버전을 사용해주세요.
+문구 추가: 2021년 1월 기준, node-sass의 최신 버전이 create-react-app에서 지원되고 있지 않습니다. 따라서, 구 버전을 사용해 주세요.
 
 ### 10.1 업데이트 (pg. 255)
 
