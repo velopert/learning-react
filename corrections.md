@@ -7,3 +7,23 @@
 - [개정판-2쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-2%EC%87%84.md)
 - [개정판-3쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-3%EC%87%84.md)
 - [개정판-4쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-4%EC%87%84.md)
+
+### 20.3.5 업데이트 (pg.559, pg.560)
+
+`runtime~main.js` 가 `runtime-main.js` 로 변경됐습니다.
+
+pg.559 에서 asset-maniefst.json 파일을 다음과 같이 변경합니다.
+
+```diff
+-  "runtime~main.js": "/static/js/runtime~main.c5541365.js",
+-  "runtime~main.js.map": "/static/js/runtime~main.c5541365.js.map",
++  "runtime~main.js": "/static/js/runtime-main.c5541365.js",
++  "runtime~main.js.map": "/static/js/runtime-main.c5541365.js.map",
+```
+
+pg.560에서 index.server.js 를 다음과 같이 변경합니다.
+
+```diff
+- <script src="${manifest.files['runtime~main.js']}"></script>
++ <script src="${manifest.files['runtime-main.js']}"></script>
+```
