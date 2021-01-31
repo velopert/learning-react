@@ -8,6 +8,24 @@
 - [개정판-3쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-3%EC%87%84.md)
 - [개정판-4쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-4%EC%87%84.md)
 
+### 9.2 업데이트 (pg. 224)
+
+node-sass 최신 버전이 현재 create-react-app에서 작동하지 않습니다. 따라서, 구버전을 설치해야 합니다.
+
+```diff
+- $ yarn add node-sass
++ $ yarn add node-sass@4.14.1
+```
+
+문구 추가: 2021년 1월 기준, node-sass의 최신 버전이 create-react-app 에서 지원되고 있지 않습니다. 따라서, 구버전을 사용해주세요.
+
+### 10.1 업데이트 (pg. 255)
+
+```diff
+- $ yarn add node-sass classnames react-icons
++ $ yarn add node-sass@4.14.1 classnames react-icons
+```
+
 ### 20.3.5 업데이트 (pg.559, pg.560)
 
 `runtime~main.js` 가 `runtime-main.js` 로 변경됐습니다.
