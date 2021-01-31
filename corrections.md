@@ -8,6 +8,23 @@
 - [개정판-3쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-3%EC%87%84.md)
 - [개정판-4쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-4%EC%87%84.md)
 
+### 8.2.3 (pg. 199) 개선
+
+기존의 설명에서 사용되던 코드가 적절하지 않아 코드를 변경합니다.
+
+Info.js - useEffect
+
+```javascript
+useEffect(() => {
+  console.log('effect');
+  return () => {
+    console.log('unmount');
+  };
+}, []);
+```
+
+> 'unmount' 부분 볼드 처리 부탁합니다.
+
 ### 9.2 업데이트 (pg. 224)
 
 node-sass 최신 버전이 현재 create-react-app에서 작동하지 않습니다. 따라서, 구버전을 설치해야 합니다.
