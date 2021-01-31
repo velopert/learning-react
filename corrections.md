@@ -45,3 +45,12 @@ pg.560에서 index.server.js 를 다음과 같이 변경합니다.
 - <script src="${manifest.files['runtime~main.js']}"></script>
 + <script src="${manifest.files['runtime-main.js']}"></script>
 ```
+
+### 24.2.2 오탈자 (pg. 800)
+
+localStorage 에서 데이터 조회 후 `JSON.parse` 를 해야 하는데 이 부분이 생략됐습니다.
+
+```diff
+- store.dispatch(tempSetUser(user));
++ store.dispatch(tempSetUser(JSON.parse(user)));
+```
