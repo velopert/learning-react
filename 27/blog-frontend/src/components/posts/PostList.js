@@ -43,6 +43,7 @@ const PostItemBlock = styled.div`
 
 const PostItem = ({ post }) => {
   const { publishedDate, user, tags, title, body, _id } = post;
+
   return (
     <PostItemBlock>
       <h2>
@@ -76,7 +77,7 @@ const PostList = ({ posts, loading, error, showWriteButton }) => {
       {/*  로딩 중 아니고, 포스트 배열이 존재할 때만 보여줌 */}
       {!loading && posts && (
         <div>
-          {posts.map(post => (
+          {posts.map((post) => (
             <PostItem post={post} key={post._id} />
           ))}
         </div>

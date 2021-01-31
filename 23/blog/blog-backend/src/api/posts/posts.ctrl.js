@@ -41,18 +41,16 @@ export const checkOwnPost = (ctx, next) => {
     tags: ['태그1', '태그2']
   }
 */
-export const write = async ctx => {
+export const write = async (ctx) => {
   const schema = Joi.object().keys({
     // 객체가 다음 필드를 가지고 있음을 검증
     title: Joi.string().required(), // required() 가 있으면 필수 항목
     body: Joi.string().required(),
-    tags: Joi.array()
-      .items(Joi.string())
-      .required(), // 문자열로 이루어진 배열
+    tags: Joi.array().items(Joi.string()).required(), // 문자열로 이루어진 배열
   });
 
   // 검증 후, 검증 실패시 에러처리
-  const result = Joi.validate(ctx.request.body, schema);
+  const result = schema.validate(ctx.request.body);
   if (result.error) {
     ctx.status = 400; // Bad Request
     ctx.body = result.error;
@@ -77,7 +75,7 @@ export const write = async ctx => {
 /*
   GET /api/posts?username=&tag=&page=
 */
-export const list = async ctx => {
+export const list = async (ctx) => {
   // query 는 문자열이기 때문에 숫자로 변환해주어야합니다.
   // 값이 주어지지 않았다면 1 을 기본으로 사용합니다.
   const page = parseInt(ctx.query.page || '1', 10);
@@ -103,7 +101,7 @@ export const list = async ctx => {
       .exec();
     const postCount = await Post.countDocuments(query).exec();
     ctx.set('Last-Page', Math.ceil(postCount / 10));
-    ctx.body = posts.map(post => ({
+    ctx.body = posts.map((post) => ({
       ...post,
       body:
         post.body.length < 200 ? post.body : `${post.body.slice(0, 200)}...`,
@@ -116,14 +114,14 @@ export const list = async ctx => {
 /*
   GET /api/posts/:id
 */
-export const read = async ctx => {
+export const read = async (ctx) => {
   ctx.body = ctx.state.post;
 };
 
 /*
   DELETE /api/posts/:id
 */
-export const remove = async ctx => {
+export const remove = async (ctx) => {
   const { id } = ctx.params;
   try {
     await Post.findByIdAndRemove(id).exec();
@@ -141,7 +139,7 @@ export const remove = async ctx => {
     tags: ['수정', '태그']
   }
 */
-export const update = async ctx => {
+export const update = async (ctx) => {
   const { id } = ctx.params;
   // write 에서 사용한 schema 와 비슷한데, required() 가 없습니다.
   const schema = Joi.object().keys({
@@ -151,7 +149,7 @@ export const update = async ctx => {
   });
 
   // 검증 후, 검증 실패시 에러처리
-  const result = Joi.validate(ctx.request.body, schema);
+  const result = schema.validate(ctx.request.body);
   if (result.error) {
     ctx.status = 400; // Bad Request
     ctx.body = result.error;
