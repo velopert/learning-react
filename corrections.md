@@ -1,13 +1,13 @@
 # 오탈자 및 개선사항
 
-여기에 있는 내용은 개정판 5쇄 이상 기준입니다.
+여기에 있는 내용은 개정판 6쇄 이상 기준입니다.
 개정판 1~4쇄에 기준한 업데이트 사항은 다음 링크에서 확인하세요:
 
 - [개정판-1쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-1%EC%87%84.md)
 - [개정판-2쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-2%EC%87%84.md)
 - [개정판-3쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-3%EC%87%84.md)
 - [개정판-4쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-4%EC%87%84.md)
-- [개정판-4쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-5%EC%87%84.md)
+- [개정판-5쇄.md](https://github.com/velopert/learning-react/blob/master/_old_corrections/%EA%B0%9C%EC%A0%95%ED%8C%90-5%EC%87%84.md)
 
 ### 1.3.1 (pg.44 ~ pg.46) 내용 업데이트
 
@@ -246,8 +246,8 @@ $ yarn add sass classnames react-icons
 
 ### 11.2 리액트 성능 측정 관련 스크린샷 및 설명 변경 (pg.292~294, 299, 310)
 
-리액트 성능 측정 방법이 바뀌었습니다. 내용이 많아서, 따로 PDF에 정리했습니다.
-자세한 내용 PDF 파일 확인
+리액트 성능 측정 방법이 바뀌었습니다. 내용이 많아서, 따로 [PDF](https://github.com/velopert/learning-react/blob/master/update-pdf/7%EC%87%84.pdf)에 정리했습니다.
+
 
 
 ### 20.3.5 업데이트 (pg.559)

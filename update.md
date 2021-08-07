@@ -2,6 +2,16 @@
 
 리액트에 큰 변화 또는 책에서 더 이상 예시 프로젝트가 작동하게 되지 않게 되는 일이 발생하면 이 페이지에서 소식을 전합니다.
 
+
+## 2021.8.8
+7쇄를 준비하며 제보된 다양한 이슈들이 [corrections.md](https://github.com/velopert/learning-react/blob/master/corrections.md)에 반영되었습니다.
+
+주요 업데이트 내용은 다음과 같습니다.
+
+- sass 커스텀 옵션 설정 방법 변경
+- React를 import를 하는 것이 더 이상 필수가 아님
+- 컴포넌트 성능 분석 방법 바뀜
+
 ## 2020.2.9
 
 개정판에 제보된 다양한 이슈들이 [corrections.md](https://github.com/velopert/learning-react/blob/master/corrections.md) 페이지에 업데이트 됐습니다.
