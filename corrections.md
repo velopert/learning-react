@@ -105,6 +105,26 @@ pg. 190
 import { useState } from "react";
 ```
 
+반면, `React.memo` 를 사용하는 코드가 있다면 React를 불러와야 합니다.
+
+```javascript
+import React from 'react';
+
+(...)
+
+export default React.memo(...)
+```
+
+또는 다음과 같이 사용할 수도 있습니다.
+
+```javascript
+import { memo } from 'react';
+
+(...)
+
+export default memo(...)
+```
+
 ### 책 전체에서 나오는 설명 변경
 
 "함수형 컴포넌트" 라는 용어를 "함수 컴포넌트" 로 모두 바꿉니다.
