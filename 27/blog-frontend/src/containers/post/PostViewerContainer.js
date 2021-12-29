@@ -1,15 +1,16 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { readPost, unloadPost } from '../../modules/post';
 import PostViewer from '../../components/post/PostViewer';
 import PostActionButtons from '../../components/post/PostActionButtons';
 import { setOriginalPost } from '../../modules/write';
 import { removePost } from '../../lib/api/posts';
+import { useParams, useNavigate } from 'react-router-dom';
 
-const PostViewerContainer = ({ match, history }) => {
+const PostViewerContainer = () => {
   // 처음 마운트될 때 포스트 읽기 API 요청
-  const { postId } = match.params;
+  const { postId } = useParams();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { post, error, loading, user } = useSelector(
     ({ post, loading, user }) => ({
@@ -30,13 +31,13 @@ const PostViewerContainer = ({ match, history }) => {
 
   const onEdit = () => {
     dispatch(setOriginalPost(post));
-    history.push('/write');
+    navigate('/write');
   };
 
   const onRemove = async () => {
     try {
       await removePost(postId);
-      history.push('/'); // 홈으로 이동
+      navigate('/'); // 홈으로 이동
     } catch (e) {
       console.log(e);
     }
@@ -56,4 +57,4 @@ const PostViewerContainer = ({ match, history }) => {
   );
 };
 
-export default withRouter(PostViewerContainer);
+export default PostViewerContainer;

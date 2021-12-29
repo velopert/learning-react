@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import WriteActionButtons from '../../components/write/WriteActionButtons';
 import { useSelector, useDispatch } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { writePost, updatePost } from '../../modules/write';
+import { useNavigate } from 'react-router-dom';
 
-const WriteActionButtonsContainer = ({ history }) => {
+const WriteActionButtonsContainer = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { title, body, tags, post, postError, originalPostId } = useSelector(
     ({ write }) => ({
@@ -34,19 +35,19 @@ const WriteActionButtonsContainer = ({ history }) => {
 
   // 취소
   const onCancel = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   // 성공 혹은 실패시 할 작업
   useEffect(() => {
     if (post) {
       const { _id, user } = post;
-      history.push(`/@${user.username}/${_id}`);
+      navigate(`/@${user.username}/${_id}`);
     }
     if (postError) {
       console.log(postError);
     }
-  }, [history, post, postError]);
+  }, [navigate, post, postError]);
   return (
     <WriteActionButtons
       onPublish={onPublish}
@@ -56,4 +57,4 @@ const WriteActionButtonsContainer = ({ history }) => {
   );
 };
 
-export default withRouter(WriteActionButtonsContainer);
+export default WriteActionButtonsContainer;
