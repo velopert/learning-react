@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.1",
     "dotenv": "^7.0.0",
     "eslint-config-prettier": "^4.1.0",
     "esm": "^3.2.22",
