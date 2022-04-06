@@ -20,7 +20,7 @@ export default function createRequestThunk(type, request) {
         payload: e,
         error: true
       }); // 에러 발생
-      dispatch(startLoading(type));
+      dispatch(finishLoading(type));
       throw e;
     }
   };
