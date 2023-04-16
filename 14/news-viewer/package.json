@@ -4,10 +4,9 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
-    "reac": "^0.0.0",
-    "react": "^16.8.6",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.2.1",
+    "react-router-dom": "^6.10.0",
     "react-scripts": "^5.0.1",
     "styled-components": "^4.2.1"
   },
