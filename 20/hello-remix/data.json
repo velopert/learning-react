@@ -1,0 +1,34 @@
+{
+  "stories": [
+    {
+      "id": 1,
+      "title": "첫 번째 이야기",
+      "body": "Remix..."
+    },
+    {
+      "id": 2,
+      "title": "두 번째 이야기",
+      "body": "Data Loading...!"
+    },
+    {
+      "id": 3,
+      "title": "세 번째 이야기",
+      "body": "Data Write!"
+    },
+    {
+      "title": "와우!",
+      "body": "새로운 이야기",
+      "id": 4
+    },
+    {
+      "title": "방금 작성한 이야기",
+      "body": "blablah",
+      "id": 5
+    },
+    {
+      "title": "gdgdg",
+      "body": "dgdgd",
+      "id": 6
+    }
+  ]
+}
