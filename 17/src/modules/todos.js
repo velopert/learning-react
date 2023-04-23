@@ -1,5 +1,5 @@
 import { createAction, handleActions } from 'redux-actions';
-import {produce} from 'immer';
+import { produce } from 'immer';
 
 const CHANGE_INPUT = 'todos/CHANGE_INPUT'; // 인풋 값을 변경함
 const INSERT = 'todos/INSERT'; // 새로운 todo 를 등록함
