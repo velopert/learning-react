@@ -4,15 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@hapi/joi": "^17.1.0",
+    "@hapi/joi": "^17.1.1",
     "dotenv": "^7.0.0",
     "eslint-config-prettier": "^4.1.0",
-    "esm": "^3.2.22",
-    "joi": "^17.3.0",
-    "koa": "^2.7.0",
-    "koa-bodyparser": "^4.2.1",
-    "koa-router": "^7.4.0",
-    "mongoose": "^5.5.2"
+    "esm": "^3.2.25",
+    "joi": "^17.9.1",
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.0",
+    "koa-router": "^12.0.0",
+    "mongoose": "6.10.5"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
