@@ -1,10 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 import rootReducer, { rootSaga } from './modules';
 // import loggerMiddleware from './lib/loggerMiddleware';
 import { createLogger } from 'redux-logger';
@@ -20,11 +19,13 @@ const store = createStore(
 );
 sagaMiddleware.run(rootSaga);
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+  <React.StrictMode>
   <Provider store={store}>
     <App />
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
+  </React.StrictMode>
 );
 
-serviceWorker.unregister();
